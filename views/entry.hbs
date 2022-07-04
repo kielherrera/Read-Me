@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Read Me! - Creativity Hub</title>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<link rel="stylesheet" href="/css/entrycss.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+	</head>
+
+	<body>
+		<div class="navbar">
+		  <a href="/" id="signin">Sign out</a>
+		  <a href="profile">Profile</a>
+			<div class="dropdown">
+		    	<button class="dropbtn">Menu
+		      		<i class="fa fa-caret-down"></i>
+		    	</button>
+		    	<div class="dropdown-content">
+		      		<a href="entry">Create Essay</a>
+		    	</div>
+		  	</div>
+		  <a href="/Loggedin">Home</a>
+		</div>
+			<form action="/submit-content" method="post" enctype="multipart/form-data">
+			<input type="text" class="essaytitle" id="essaytitle" placeholder="Title" name="essaytitle">
+			<hr class="dotted">
+			<textarea name="essay" class ="essay" rows="20" id="essay" placeholder="Type your essay...." ></textarea>
+		<div class="container">
+			<label class ="imgtitle">Title image:</label>
+			<input type="file" name="image" class="image" id="image">
+			<input type="submit" name="submit-essay" class="button" id="submit-essay"value="SUBMIT">
+			</form>
+		</div>
+	</body>
+
+</html>

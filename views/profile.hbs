@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Read Me! - Creativity Hub</title>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<link rel="stylesheet" href="/css/profilecss.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+
+	<body>
+		<div class="navbar">
+		  <a href="/signout" id="signout">Sign out</a>
+			<div class="dropdown">
+		    	<button class="dropbtn">Menu
+		      		<i class="fa fa-caret-down"></i>
+		    	</button>
+		    	<div class="dropdown-content">
+		      		<a href="entry">Create Essay</a>
+		    	</div>
+		  	</div>
+		  	<a href="/LoggedIn" style="color:white">Home</a>
+		  	<div class="logo">
+				<img src="read_me_logo.jpg" alt="Photo of Logo" />
+			</div>
+		</div>
+		<div class = "topcolor">
+			{{#each info}}
+				<div class ="fullname">{{firstname}} {{lastname}}</div>
+				<div class ="username">{{username}}</div>
+			{{/each}}
+			<section>			
+				<div class="container">
+					<div class ="label" style="left: 76px;">Essays by Me</div>
+					{{#each essay}}
+						<div class="essay">
+							<a href="/viewessayandcomment?essaytitle={{essaytitle}}" class ="peressay" style="color:black; top:450px; left: 76px; right:20px;">{{essaytitle}}</a>	<a href="/delete?essaytitle={{essaytitle}}&author={{author}}" class="delete" style="color:black; top:450px; left: 200px;">(Delete this essay)<a/><br>
+						</div>
+					{{/each}}
+				</div>		
+			</section>
+		</div>
+	</body>
+
+</html>
