@@ -28,13 +28,13 @@
 		</div>
 
 		<div class="logo">
-			<img src="/images/read_me_logo.jpg" alt="Photo of Logo" />
+			<img src="/images/read_me_logo.jpg" alt="Photo of Logo" style="height: 270px" />
 		</div>
 
 		<div class="search-bar">
 			<form class="search-bar-input" action="/1search"  style="margin:auto;max-width:310px">
 			  <input type="text" placeholder="Search..." name="search">
-			  <button type="submit"><i class="fa fa-search"></i></button>
+			  <button type="submit" style="height:42px"><i class="fa fa-search"></i></button>
 			</form>
 		</div>
 
@@ -44,14 +44,6 @@
 		</div>
 
 		<div class="box-container">
-
-			<div class = "box">
-				<img class = "book-logo" src="meditations.jpg" alt="Photo of Book" />
-				 <a href="MeditationsMain.html" id="view-essay" style="outline:none;color:black;"><p>Meditations</p></a>
-				<div class = "like-comment">
-					<i onclick="#" class="fa fa-thumbs-up" name="like"></i>
-				</div>
-			</div>
 
 			{{#each result}}
                 {{> box essaytitle=essaytitle image=image}}
